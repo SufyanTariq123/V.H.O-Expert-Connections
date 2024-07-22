@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - V.H.O Expert Connections</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="registration">
+            <h1>Register as an Expert</h1>
+            <form id="registration-form">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step" id="step-1">
+                    <h2>Step 1: Personal Information</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                    <button type="button" onclick="nextStep(1)">Next</button>
+                </div>
+                
+                <!-- Step 2: Expertise and Skills -->
+                <div class="form-step" id="step-2" style="display:none;">
+                    <h2>Step 2: Expertise and Skills</h2>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" name="skills" required>
+                    <button type="button" onclick="prevStep(2)">Back</button>
+                    <button type="button" onclick="nextStep(2)">Next</button>
+                </div>
+
+                <!-- Step 3: Affiliations and Projects -->
+                <div class="form-step" id="step-3" style="display:none;">
+                    <h2>Step 3: Affiliations and Projects</h2>
+                    <label for="affiliations">Affiliations:</label>
+                    <input type="text" id="affiliations" name="affiliations" required>
+                    <label for="projects">Current Projects:</label>
+                    <input type="text" id="projects" name="projects" required>
+                    <button type="button" onclick="prevStep(3)">Back</button>
+                    <button type="button" onclick="nextStep(3)">Next</button>
+                </div>
+
+                <!-- Step 4: Confirm V.H.O Rules -->
+                <div class="form-step" id="step-4" style="display:none;">
+                    <h2>Step 4: Confirm V.H.O Rules</h2>
+                    <p>Please read and confirm the following rules to proceed:</p>
+                    <ol>
+                        <li>By registering, you agree to share your professional information publicly on the V.H.O platform.</li>
+                        <li>V.H.O will use your information to promote your profile and create job opportunities for you.</li>
+                        <li>As a V.H.O member, you are expected to respond to inquiries and job offers received through the platform.</li>
+                        <li>You agree to follow the community guidelines and maintain professionalism in all communications.</li>
+                        <li>V.H.O will connect you with potential clients and collaborators to help grow your business and network.</li>
+                        <li>You acknowledge that V.H.O is not responsible for any agreements or contracts made outside the platform.</li>
+                        <li>You agree to keep your profile information up-to-date and accurate.</li>
+                        <li>You consent to V.H.O using your information for marketing and promotional purposes.</li>
+                        <li>By joining V.H.O, you contribute to the community's growth and success through active participation.</li>
+                        <li>Failure to comply with V.H.O rules may result in suspension or removal from the platform.</li>
+                    </ol>
+                    <label>
+                        <input type="checkbox" name="confirm-rules" required>
+                        I confirm that I have read and agree to the V.H.O rules and conditions.
+                    </label>
+                    <button type="button" onclick="prevStep(4)">Back</button>
+                    <button type="button" onclick="nextStep(4)">Next</button>
+                </div>
+
+                <!-- Final Step: Confirmation -->
+                <div class="form-step" id="step-5" style="display:none;">
+                    <h2>Final Confirmation</h2>
+                    <p>Please confirm the following:</p>
+                    <label>
+                        <input type="checkbox" name="public-listing" required>
+                        I agree to be publicly listed as an expert on V.H.O Expert Connections.
+                    </label>
+                    <button type="button" onclick="prevStep(5)">Back</button>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 V.H.O Expert Connections</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

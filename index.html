@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.H.O Expert Connections</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="V.H.O Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="introduction">
+            <h1>Welcome to V.H.O Expert Connections</h1>
+            <p>Your one-stop platform to connect with industry experts for business growth, development, and networking.</p>
+        </section>
+        <section class="expert-profiles">
+            <h2>Our Experts</h2>
+            <div class="expert-grid" id="expert-grid">
+                <!-- Expert profiles will be dynamically inserted here -->
+            </div>
+        </section>
+        <section class="get-match">
+            <h2>Find the Right Expert</h2>
+            <button id="start-chatbot">Get Match</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 V.H.O Expert Connections</p>
+    </footer>
+    <div id="chatbot-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-chatbot">&times;</span>
+            <div id="chatbot-container">
+                <div id="chatbot-messages"></div>
+                <input type="text" id="chatbot-input" placeholder="Type your message here...">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
